@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<plugin name="com.ququplay.websocket.websocket" spec="0.1.0" source="pgb" />
-
 <widget xmlns   = "http://www.w3.org/ns/widgets"
     xmlns:gap   = "http://phonegap.com/ns/1.0"
     id          = "com.jeremytetu"
@@ -19,5 +17,7 @@
   <author href="https://jeremytetu.ddns.net" email="jeremy.tetu@gmail.com">
       Jeremy Tetu
   </author>
+    
+  <plugin name="com.ququplay.websocket.websocket" spec="0.1.0" source="pgb" />
 
 </widget>
