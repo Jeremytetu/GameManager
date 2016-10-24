@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="GamesManager">
+  <head>
+    <meta name="viewport" content="width=device-width, user-scalable=no"> 
+
+  	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  
+  	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/overrides.css">
+
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="routing.js"></script>
+    <script src="controllers.js"></script>
+    <script src="js/webSocket.js"></script>
+    
+	 
+  </head>
+  <body>
+<div ng-controller="demoSwipeCtrl" ng-cloak  style='height:100%' id='allgames'>
+    <div class="demo-swipe" md-swipe-left="planLock=!planLock" ng-show='planLock' style='height:100%' >
+      <div class='divTitle'> MY GAMES 
+		    <md-button class="md-fab md-mini" aria-label="afterburner" ng-click='startMSI()'>
+            <img src='images/afterburner.png' style='margin-left:-3px; width:140%'>
+        </md-button>  </div>
+      <div class='myGames' style='overflow:auto;'>
+        <div ng-repeat='game in games' style='margin-top: 50px;'>
+          <div class='divGame' layout='column'>
+            <img ng-src="{{game.image}}" style='width:100%'>
+            <md-button class="md-raised md-primary" style='margin-top:10px; margin-bottom:10px;' ng-click='startGame(game.path)'>START {{game.name}}</md-button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-swipe" md-swipe-right="planLock=!planLock" ng-show='!planLock' style='height:100%'>
+      <div class='displaySwitch' layout="column" >
+        <div class='divTitle'> DISPLAY SWITCH </div>
+          <div class='boxSwitch' ng-click='displaySwitch("pc")' layout="row" style='margin-top: 50px;'>
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/tv_white.png"></div>
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/laptop.png"></div>
+          </div>
+          <div class='boxSwitch' ng-click='displaySwitch("duplicate")' layout="row">
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/tv_white_dark_souls.png"></div>
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/laptop_white_dark_souls.png"></div>
+          </div>
+          <div class='boxSwitch' ng-click='displaySwitch("extend")' layout="row">
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/tv_white_dark.png"></div>
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/laptop_white_souls.png"></div>
+          </div>
+          <div class='boxSwitch' ng-click='displaySwitch("tv")' layout="row">
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/tv.png"></div>
+            <div style='margin:auto; width:300px;'><img style='width:100%;' src="images/laptop_white.png"></div>
+          </div>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
