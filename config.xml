@@ -20,5 +20,4 @@
     
   <!--<plugin name="com.ququplay.websocket.websocket" spec="0.1.0" source="pgb" />-->
     <gap:plugin name="cordova-plugin-websocket" source="npm" /> 
-    <gap:plugin name="generator-angularjs-cordova" source="npm" /> 
 </widget>
