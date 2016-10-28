@@ -2,7 +2,7 @@ var GamesManager = angular.module('GamesManager', ['ngRoute', 'ngAnimate', 'ngMa
 
 GamesManager.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
-    when('/', {
+    when('/games', {
       templateUrl : 'games.html',
       controller: 'gamesCtrl'
     }).
@@ -11,7 +11,7 @@ GamesManager.config(['$routeProvider', function($routeProvider) {
       controller: 'displaySwitchCtrl'
     }).
     otherwise({
-      redirectTo : '/'
+      redirectTo : '/games'
     });
 }]);
 

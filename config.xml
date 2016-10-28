@@ -10,6 +10,9 @@
 
   <name>Gaming Zone</name>
 
+  <icon src="icon_GamingZone.png" />
+  <splash src="icon_GamingZone.png" />
+
   <description>
       Manage my games
   </description>

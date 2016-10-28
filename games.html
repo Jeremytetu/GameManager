@@ -1,1 +1,8 @@
-LISTES DES JEUX
+<div class='myGames' ng-cloak  style='height:100%; overflow:auto;' id='allgames'>
+    <div ng-repeat='game in games'>
+      <md-card layout='column'>
+        <img ng-src="{{game.image}}" style='width:100%'>
+        <md-button class="md-raised md-primary" style='margin-top:10px; margin-bottom:10px;' ng-click='startGame(game.path)'>START {{game.name}}</md-button>
+      </md-card>
+    </div>
+ </div>

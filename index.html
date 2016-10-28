@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> 
 
   	<link rel="stylesheet" href="css/angular-material.min.css">
-  	<!--<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">  -->
+  	<link rel="stylesheet" href="css/material-icons.css">
   	<link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/overrides.css">
 
@@ -23,11 +23,36 @@
 	 
   </head>
   <body>
-<div ng-controller="demoSwipeCtrl" ng-cloak  style='height:100%' id='allgames'>
-    <div class="demo-swipe" md-swipe-left="planLock=!planLock" ng-show='planLock' style='height:100%' >
-      <div class='divTitle'> MY GAMES 
-		    <md-button class="md-fab md-mini" aria-label="afterburner" ng-click='startMSI()'>
-            <img src='images/afterburner.png' style='margin-left:-3px; width:140%'>
+    <div ng-controller="NavCtrl" >
+      <md-toolbar class="md-hue-2" id='NavBar' >
+      <div class="md-toolbar-tools">
+        <md-button class="md-icon-button" aria-label="Games" href='#/games' >
+          <md-icon><i class="material-icons">games</i></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="DisplaySwitch" href='#/displaySwitch'>
+          <md-icon><i class="material-icons">compare</i></md-icon>
+        </md-button>
+
+        <span flex></span>
+        
+        <md-button class="md-icon-button" aria-label="Settings" >
+          <md-icon ng-click="openFromLeft(ev)"><i class="material-icons">settings</i></md-icon>
+        </md-button>
+      </div>
+     </md-toolbar>
+    </div>
+
+    <md-content id='ngView'>
+      <div ng-view></div>
+    </md-content>
+    
+    
+
+<!--<div ng-controller="demoSwipeCtrl" ng-cloak  style='height:100%' >
+    <!--<div class="demo-swipe" md-swipe-left="planLock=!planLock" ng-show='planLock' style='height:100%' >
+      <div class='divTitle'> MY GAMES
+		    <md-button class="md-fab md-mini" aria-label="afterburner" ng-click="openFromLeft(ev)">
+            <img src='images/wifi.png' style='width:100%' id='mygames'>
         </md-button>  </div>
       <div class='myGames' style='overflow:auto;'>
         <div ng-repeat='game in games' style='margin-top: 50px;'>
@@ -37,8 +62,8 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="demo-swipe" md-swipe-right="planLock=!planLock" ng-show='!planLock' style='height:100%'>
+    </div>-->
+    <!--<div class="demo-swipe" md-swipe-right="planLock=!planLock" ng-show='!planLock' style='height:100%'>
       <div class='displaySwitch' layout="column" >
         <div class='divTitle'> DISPLAY SWITCH </div>
           <div class='boxSwitch' ng-click='displaySwitch("pc")' layout="row" style='margin-top: 50px;'>
@@ -59,7 +84,9 @@
           </div>
       </div>
     </div>
-</div>
+
+    
+</div>-->
 
 
 
