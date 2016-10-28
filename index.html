@@ -27,16 +27,16 @@
       <md-toolbar class="md-hue-2" id='NavBar' >
       <div class="md-toolbar-tools">
         <md-button class="md-icon-button" aria-label="Games" href='#/games' >
-          <md-icon><i class="material-icons">games</i></md-icon>
+          <md-icon md-svg-src="svg/games.svg"><!--<i class="material-icons">games</i>--></md-icon>
         </md-button>
         <md-button class="md-icon-button" aria-label="DisplaySwitch" href='#/displaySwitch'>
-          <md-icon><i class="material-icons">compare</i></md-icon>
+          <md-icon md-svg-src="svg/switch.svg"><!--<i class="material-icons">compare</i>--></md-icon>
         </md-button>
 
         <span flex></span>
         
         <md-button class="md-icon-button" aria-label="Settings" >
-          <md-icon ng-click="openFromLeft(ev)"><i class="material-icons">settings</i></md-icon>
+          <md-icon ng-click="openFromLeft(ev)" md-svg-src="svg/settings.svg"></md-icon>
         </md-button>
       </div>
      </md-toolbar>
