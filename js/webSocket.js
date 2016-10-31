@@ -48,16 +48,26 @@ var listen = function(){
 
 function tryConnection() {
 	var scope = angular.element($("#NavBar")).scope();
+	var bool = true;
 	try{
 		ws = new WebSocket("ws://"+scope.ip+":8080");
 		console.log('connected');
-		listen();
-		return true;
+		//listen();
+		//return true;
 	}
 	catch(e){
 		console.log('echec connection');
 		scope.showAlert(e);
-		return false;
+		bool = false;
+	}
+	finally {
+		if (bool){
+		   listen();
+		   return true;
+		}
+		else {
+			return false;
+		}
 	}
 	
 }
