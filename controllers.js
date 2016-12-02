@@ -60,6 +60,8 @@ MyGamesManagerControllers.controller('gamesCtrl', function ($scope, $route) {
       sendPath(game_path);
     }
 
+  tryConnection()
+
   getGames(); //Charge les jeux dans le scope
 
 
